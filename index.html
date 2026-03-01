@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Café da Roça</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#2e1f13;
+color:white;
+}
+
+header{
+background:url("https://images.unsplash.com/photo-1447933601403-0c6688de566e") center/cover;
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:45px;
+font-weight:bold;
+text-shadow:3px 3px 10px black;
+}
+
+nav{
+background:#1b120b;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+padding:15px 25px;
+font-size:18px;
+cursor:pointer;
+}
+
+nav button:hover{
+background:#3b2617;
+}
+
+.tab{
+display:none;
+padding:40px;
+text-align:center;
+}
+
+.tab img{
+width:90%;
+max-width:600px;
+border-radius:10px;
+margin:20px 0;
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+.active{
+display:block;
+}
+
+footer{
+background:#1b120b;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+Guia do Café da Roça ☕
+</header>
+
+<nav>
+<button onclick="abrir('inicio')">Início</button>
+<button onclick="abrir('plantar')">Como Plantar</button>
+<button onclick="abrir('cultivar')">Como Cultivar</button>
+<button onclick="abrir('adubar')">Como Adubar</button>
+</nav>
+
+<div id="inicio" class="tab active">
+<h2>Bem vindo</h2>
+<p>Este site mostra um pouco sobre o cultivo de café na roça.</p>
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+</div>
+
+<div id="plantar" class="tab">
+<h2>Como Plantar Café</h2>
+<p>O café precisa de solo fértil, clima quente e boa chuva.  
+As mudas devem ser plantadas com espaço entre elas para crescer bem.</p>
+<img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187">
+</div>
+
+<div id="cultivar" class="tab">
+<h2>Como Cultivar</h2>
+<p>O cultivo exige cuidado com pragas, poda correta e bastante sol.  
+Manter o solo saudável ajuda a planta a produzir grãos melhores.</p>
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+</div>
+
+<div id="adubar" class="tab">
+<h2>Como Adubar</h2>
+<p>O café cresce melhor com adubo orgânico ou fertilizantes próprios.  
+A adubação ajuda a planta a crescer forte e produzir mais café.</p>
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+</div>
+
+<footer>
+Feito com orgulho da roça ☕
+</footer>
+
+<script>
+
+function abrir(tab){
+let abas = document.querySelectorAll(".tab");
+abas.forEach(a => a.classList.remove("active"));
+
+document.getElementById(tab).classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
